@@ -1,0 +1,60 @@
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.13.18 interpreter at /usr/local/bin/python3
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Verilator version 5.038 2025-07-08
+     0.00ns INFO     cocotb                             Seeding Python random module with supplied seed 11
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /usr/local/lib/python3.13/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_ahb.AhbTest (1/1)
+     0.00ns INFO     cocotb.ahb                         UVM_INFO @ 0 ns [TEST] VSEQ=longburst N=20 PRIO=fixed seed=11 cfg=main plusargs={'VSEQ': 'longburst', 'RESET_MID': True}
+
+
+
+------------------------------------------------------------
+ ,------.                    ,--.                ,--.       
+ |  .--. ' ,---.  ,--,--.    |  |    ,---. ,---. `--' ,---. 
+ |  '--'.'| .-. |' ,-.  |    |  |   | .-. | .-. |,--.| .--' 
+ |  |\  \ ' '-' '\ '-'  |    |  '--.' '-' ' '-' ||  |\ `--. 
+ `--' '--' `---'  `--`--'    `-----' `---' `-   /`--' `---' 
+- AHB3-Lite Interconnect Configuration---  `---'  ----------
+- Module: ahb_ic_wrap.u_ic
+- Masters: 3, Slaves: 3
+master[ 0] priority=2
+master[ 1] priority=1
+master[ 2] priority=0
+slv_addr_base[  0]=00000000000000000000000000000000 (0x00000000), slv_addr_mask[  0]=11110000000000000000000000000000 (0xf0000000)
+slv_addr_base[  1]=00010000000000000000000000000000 (0x10000000), slv_addr_mask[  1]=11110000000000000000000000000000 (0xf0000000)
+slv_addr_base[  2]=00100000000000000000000000000000 (0x20000000), slv_addr_mask[  2]=11110000000000000000000000000000 (0xf0000000)
+   650.00ns INFO     cocotb.ahb                         UVM_INFO @ 650 ns [RESET] asserting HRESETn in the middle of a burst
+   690.00ns INFO     cocotb.ahb                         UVM_INFO @ 690 ns [RESET] reset released, scoreboard queues flushed
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [SB] writes_ok=335 reads_ok=356 slave_err=0 no_slave_err=0 mask_err=0 pairs/slave=691,0,0 max_contention_wait=655
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [ARB] grant_changes=40 parallel_cycles=0 max_passed_over=24 (RTL bound 2) max_wait_cycles=655
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [SUMMARY] cycles=1815 master_beats=691 slave_beats=691
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] htrans                 100.0%
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] hburst                  25.0%
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] hsize                  100.0%
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] hwrite                 100.0%
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] x_burst_size            25.0%
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] contention_wait        100.0%
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] slave_wait              75.0%
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] x_lock_contention       50.0%
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] x_error_master           0.0%
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] error_rest_of_burst      0.0%
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] htrans_transitions      77.8%
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] masters_requesting     100.0%
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] switch_point            75.0%
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] priority_relation       66.7%
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] x_nreq_priority         60.0%
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] x_locked_contention      0.0%
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] parallel_access          0.0%
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] priority_mode           33.3%
+ 18145.00ns INFO     cocotb.ahb                         UVM_INFO @ 18145 ns [COV] reset                  100.0%
+AHB_RESULT: PASS   errors=0
+ 18145.00ns INFO     cocotb.regression                  test_ahb.AhbTest passed
+ 18145.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ahb.AhbTest               PASS       18145.00           0.51      35459.03  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0              18145.00           0.51      35362.02  **
+                                                        **************************************************************************************
+- :0: Verilog $finish

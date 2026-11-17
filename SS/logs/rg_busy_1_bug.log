@@ -1,0 +1,162 @@
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.13.18 interpreter at /usr/local/bin/python3
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Verilator version 5.038 2025-07-08
+     0.00ns INFO     cocotb                             Seeding Python random module with supplied seed 1
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /usr/local/lib/python3.13/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_ahb.AhbTest (1/1)
+     0.00ns INFO     cocotb.ahb                         UVM_INFO @ 0 ns [TEST] VSEQ=busy N=20 PRIO=equal seed=1 cfg=main plusargs={'VSEQ': 'busy', 'PRIO': 'equal'}
+
+
+
+------------------------------------------------------------
+ ,------.                    ,--.                ,--.       
+ |  .--. ' ,---.  ,--,--.    |  |    ,---. ,---. `--' ,---. 
+ |  '--'.'| .-. |' ,-.  |    |  |   | .-. | .-. |,--.| .--' 
+ |  |\  \ ' '-' '\ '-'  |    |  '--.' '-' ' '-' ||  |\ `--. 
+ `--' '--' `---'  `--`--'    `-----' `---' `-   /`--' `---' 
+- AHB3-Lite Interconnect Configuration---  `---'  ----------
+- Module: ahb_ic_wrap.u_ic
+- Masters: 3, Slaves: 3
+master[ 0] priority=1
+master[ 1] priority=1
+master[ 2] priority=1
+slv_addr_base[  0]=00000000000000000000000000000000 (0x00000000), slv_addr_mask[  0]=11110000000000000000000000000000 (0xf0000000)
+slv_addr_base[  1]=00010000000000000000000000000000 (0x10000000), slv_addr_mask[  1]=11110000000000000000000000000000 (0xf0000000)
+slv_addr_base[  2]=00100000000000000000000000000000 (0x20000000), slv_addr_mask[  2]=11110000000000000000000000000000 (0xf0000000)
+   450.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 450 ns [ARB_MID_BURST] slave0: grant moved 1->2 while 2 beat(s) left
+   460.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 460 ns [A_BURST_LEN] slave0: fixed burst cut short, 2 beat(s) missing (new NONSEQ at 0000001c)
+   460.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 460 ns [ARB_INTERLEAVE] slave0: master 2 transfer while master 1's burst/lock was open
+   930.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 930 ns [A_SEQ_IN_BURST] slave0: SEQ at 0000002e without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+   970.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 970 ns [A_SEQ_IN_BURST] slave0: SEQ at 00000030 without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  1200.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1200 ns [A_BURST_LEN] slave0: fixed burst cut short, 2 beat(s) missing (new NONSEQ at 0000003a)
+  1200.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1200 ns [ARB_MID_BURST] slave0: grant moved 2->0 while 2 beat(s) left
+  1200.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1200 ns [ARB_INTERLEAVE] slave0: master 0 transfer while master 2's burst/lock was open
+  1400.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1400 ns [ARB_MID_BURST] slave0: grant moved 0->1 while 1 beat(s) left
+  1410.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1410 ns [A_BURST_LEN] slave0: fixed burst cut short, 1 beat(s) missing (new NONSEQ at 00000014)
+  1410.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1410 ns [ARB_INTERLEAVE] slave0: master 1 transfer while master 0's burst/lock was open
+  1470.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1470 ns [ARB_MID_BURST] slave0: grant moved 1->2 while 1 beat(s) left
+  1490.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1490 ns [A_BURST_CTRL] slave0: control changed inside burst at 00000044
+  1490.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1490 ns [A_BURST_ADDR] slave0: SEQ addr 00000044, expected 00000017
+  1490.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1490 ns [ARB_INTERLEAVE] slave0: master 2 transfer while master 1's burst/lock was open
+  1530.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1530 ns [A_SEQ_IN_BURST] slave0: SEQ at 00000046 without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  1570.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1570 ns [A_SEQ_IN_BURST] slave0: SEQ at 00000039 without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  1620.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1620 ns [A_SEQ_IN_BURST] slave0: BUSY at 00000017 without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  1630.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1630 ns [A_SEQ_IN_BURST] slave0: SEQ at 00000017 without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  1710.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1710 ns [ARB_MID_BURST] slave0: grant moved 2->0 while 1 beat(s) left
+  1740.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1740 ns [A_BURST_LEN] slave0: fixed burst cut short, 1 beat(s) missing (new NONSEQ at 0000000f)
+  1740.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1740 ns [ARB_INTERLEAVE] slave0: master 0 transfer while master 2's burst/lock was open
+  2550.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 2550 ns [ARB_MID_BURST] slave0: grant moved 1->2 while 3 beat(s) left
+  2580.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 2580 ns [A_BURST_CTRL] slave0: control changed inside burst at 0000003c
+  2580.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 2580 ns [A_BURST_ADDR] slave0: BUSY addr 0000003c, expected 00000032
+  2590.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 2590 ns [A_BURST_CTRL] slave0: control changed inside burst at 0000003c
+  2590.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 2590 ns [A_BURST_ADDR] slave0: SEQ addr 0000003c, expected 00000032
+  2590.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 2590 ns [ARB_INTERLEAVE] slave0: master 2 transfer while master 1's burst/lock was open
+  2600.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 2600 ns [A_BURST_LEN] slave0: fixed burst cut short, 2 beat(s) missing (IDLE/deselect at 00000000)
+  2610.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 2610 ns [ARB_MID_BURST] slave0: grant moved 2->0 while 2 beat(s) left
+  2610.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 2610 ns [ARB_INTERLEAVE] slave0: master 0 transfer while master 2's burst/lock was open
+  2760.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 2760 ns [A_SEQ_IN_BURST] slave0: SEQ at 00000032 without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  2780.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 2780 ns [A_SEQ_IN_BURST] slave0: SEQ at 00000033 without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  2820.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 2820 ns [A_SEQ_IN_BURST] slave0: BUSY at 00000034 without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  2830.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 2830 ns [A_SEQ_IN_BURST] slave0: SEQ at 00000034 without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  3140.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 3140 ns [A_BURST_LEN] slave0: fixed burst cut short, 4 beat(s) missing (new NONSEQ at 00000000)
+  3140.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 3140 ns [ARB_MID_BURST] slave0: grant moved 2->0 while 4 beat(s) left
+  3140.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 3140 ns [ARB_INTERLEAVE] slave0: master 0 transfer while master 2's burst/lock was open
+  3480.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 3480 ns [ARB_MID_BURST] slave0: grant moved 0->1 while 2 beat(s) left
+  3510.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 3510 ns [A_BURST_LEN] slave0: fixed burst cut short, 2 beat(s) missing (new NONSEQ at 00000030)
+  3510.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 3510 ns [ARB_INTERLEAVE] slave0: master 1 transfer while master 0's burst/lock was open
+  3980.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 3980 ns [A_SEQ_IN_BURST] slave0: SEQ at 00000010 without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  3990.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 3990 ns [A_SEQ_IN_BURST] slave0: SEQ at 00000011 without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  4000.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 4000 ns [A_SEQ_IN_BURST] slave0: BUSY at 00000012 without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  4010.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 4010 ns [A_SEQ_IN_BURST] slave0: SEQ at 00000012 without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  4030.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 4030 ns [A_SEQ_IN_BURST] slave0: SEQ at 00000013 without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  4070.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 4070 ns [A_SEQ_IN_BURST] slave0: SEQ at 0000001c without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  4110.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 4110 ns [A_SEQ_IN_BURST] slave0: SEQ at 0000001e without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  4580.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 4580 ns [ARB_MID_BURST] slave0: grant moved 2->0 while 4 beat(s) left
+  4600.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 4600 ns [A_BURST_LEN] slave0: fixed burst cut short, 4 beat(s) missing (new NONSEQ at 00000010)
+  4600.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 4600 ns [ARB_INTERLEAVE] slave0: master 0 transfer while master 2's burst/lock was open
+  4750.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 4750 ns [A_BURST_LEN] slave0: fixed burst cut short, 1 beat(s) missing (new NONSEQ at 00000030)
+  4750.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 4750 ns [ARB_MID_BURST] slave0: grant moved 0->1 while 1 beat(s) left
+  4750.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 4750 ns [ARB_INTERLEAVE] slave0: master 1 transfer while master 0's burst/lock was open
+  5010.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 5010 ns [A_SEQ_IN_BURST] slave0: SEQ at 00000026 without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  5040.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 5040 ns [A_SEQ_IN_BURST] slave0: SEQ at 00000028 without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  5070.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 5070 ns [A_SEQ_IN_BURST] slave0: SEQ at 0000002a without a preceding NONSEQ (e.g. SEQ after IDLE / after last beat)
+  5640.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 5640 ns [A_BURST_LEN] slave0: fixed burst cut short, 2 beat(s) missing (new NONSEQ at 00000036)
+  5640.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 5640 ns [ARB_MID_BURST] slave0: grant moved 2->0 while 2 beat(s) left
+  5640.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 5640 ns [ARB_INTERLEAVE] slave0: master 0 transfer while master 2's burst/lock was open
+  5820.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 5820 ns [ARB_MID_BURST] slave0: grant moved 0->1 while 2 beat(s) left
+  5850.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 5850 ns [A_BURST_LEN] slave0: fixed burst cut short, 2 beat(s) missing (new NONSEQ at 00000024)
+  5850.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 5850 ns [ARB_INTERLEAVE] slave0: master 1 transfer while master 0's burst/lock was open
+  6190.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 6190 ns [ARB_MID_BURST] slave0: grant moved 1->2 while 5 beat(s) left
+  6200.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 6200 ns [A_BURST_CTRL] slave0: control changed inside burst at 0000000c
+  6200.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 6200 ns [A_BURST_ADDR] slave0: SEQ addr 0000000c, expected 00000050
+  6200.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 6200 ns [ARB_INTERLEAVE] slave0: master 2 transfer while master 1's burst/lock was open
+  6270.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 6270 ns [A_BURST_LEN] slave0: fixed burst cut short, 3 beat(s) missing (IDLE/deselect at 00000000)
+  6280.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 6280 ns [ARB_MID_BURST] slave0: grant moved 2->0 while 3 beat(s) left
+  6280.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 6280 ns [ARB_INTERLEAVE] slave0: master 0 transfer while master 2's burst/lock was open
+  6370.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 6370 ns [ARB_MID_BURST] slave0: grant moved 0->1 while 1 beat(s) left
+  6380.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 6380 ns [ARB_INTERLEAVE] slave0: master 1 transfer while master 0's burst/lock was open
+  7060.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 7060 ns [A_BURST_LEN] slave0: fixed burst cut short, 1 beat(s) missing (new NONSEQ at 00000014)
+  7060.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 7060 ns [ARB_MID_BURST] slave0: grant moved 0->1 while 1 beat(s) left
+  7060.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 7060 ns [ARB_INTERLEAVE] slave0: master 1 transfer while master 0's burst/lock was open
+  7390.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 7390 ns [ARB_MID_BURST] slave0: grant moved 1->2 while 2 beat(s) left
+  7400.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 7400 ns [A_BURST_LEN] slave0: fixed burst cut short, 2 beat(s) missing (new NONSEQ at 00000018)
+  7400.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 7400 ns [ARB_INTERLEAVE] slave0: master 2 transfer while master 1's burst/lock was open
+  7520.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 7520 ns [ARB_MID_BURST] slave0: grant moved 2->0 while 3 beat(s) left
+  7550.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 7550 ns [A_BURST_LEN] slave0: fixed burst cut short, 3 beat(s) missing (new NONSEQ at 00000004)
+  7550.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 7550 ns [ARB_INTERLEAVE] slave0: master 0 transfer while master 2's burst/lock was open
+  8300.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 8300 ns [ARB_MID_BURST] slave0: grant moved 0->1 while 3 beat(s) left
+  8320.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 8320 ns [A_BURST_LEN] slave0: fixed burst cut short, 3 beat(s) missing (new NONSEQ at 00000028)
+  8320.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 8320 ns [ARB_INTERLEAVE] slave0: master 1 transfer while master 0's burst/lock was open
+  8680.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 8680 ns [A_BURST_LEN] slave0: fixed burst cut short, 5 beat(s) missing (new NONSEQ at 00000036)
+  9570.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 9570 ns [A_BURST_LEN] slave0: fixed burst cut short, 1 beat(s) missing (new NONSEQ at 00000028)
+  9900.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 9900 ns [A_BURST_LEN] slave0: fixed burst cut short, 2 beat(s) missing (new NONSEQ at 0000001c)
+ 10580.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 10580 ns [A_BURST_LEN] slave0: fixed burst cut short, 3 beat(s) missing (new NONSEQ at 0000002c)
+ 11330.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 11330 ns [A_BURST_CTRL] slave0: control changed inside burst at 0000001d
+ 11330.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 11330 ns [A_BURST_ADDR] slave0: SEQ addr 0000001d, expected 00000018
+ 12180.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 12180 ns [A_BURST_CTRL] slave0: control changed inside burst at 00000048
+ 12180.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 12180 ns [A_BURST_ADDR] slave0: SEQ addr 00000048, expected 00000000
+ 13010.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 13010 ns [A_BURST_CTRL] slave0: control changed inside burst at 00000022
+ 13010.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 13010 ns [A_BURST_ADDR] slave0: SEQ addr 00000022, expected 00000019
+ 14020.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 14020 ns [A_BURST_CTRL] slave0: control changed inside burst at 0000003b
+ 14020.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 14020 ns [A_BURST_ADDR] slave0: SEQ addr 0000003b, expected 00000028
+ 16840.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 16840 ns [A_BURST_CTRL] slave0: control changed inside burst at 00000048
+ 16840.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 16840 ns [A_BURST_ADDR] slave0: SEQ addr 00000048, expected 00000014
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [SB] writes_ok=356 reads_ok=240 slave_err=0 no_slave_err=0 mask_err=0 pairs/slave=596,0,0 max_contention_wait=84
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [ARB] grant_changes=98 parallel_cycles=0 max_passed_over=2 (RTL bound 2) max_wait_cycles=84
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [SUMMARY] cycles=1736 master_beats=596 slave_beats=596
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] htrans                 100.0%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] hburst                  75.0%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] hsize                  100.0%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] hwrite                 100.0%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] x_burst_size            70.8%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] contention_wait         80.0%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] slave_wait              75.0%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] x_lock_contention       50.0%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] x_error_master           0.0%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] error_rest_of_burst      0.0%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] htrans_transitions      77.8%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] masters_requesting     100.0%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] switch_point            75.0%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] priority_relation       66.7%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] x_nreq_priority         60.0%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] x_locked_contention      0.0%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] parallel_access          0.0%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] priority_mode           33.3%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [COV] reset                    0.0%
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [ERRORS] ARB_INTERLEAVE   43
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [ERRORS] ARB_MID_BURST    43
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [ERRORS] A_BURST_ADDR     9
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [ERRORS] A_BURST_CTRL     9
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [ERRORS] A_BURST_LEN      33
+ 17355.00ns INFO     cocotb.ahb                         UVM_INFO @ 17355 ns [ERRORS] A_SEQ_IN_BURST   92
+AHB_RESULT: FAIL   errors=229
+ 17355.00ns INFO     cocotb.regression                  test_ahb.AhbTest passed
+ 17355.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ahb.AhbTest               PASS       17355.00           0.46      37668.15  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0              17355.00           0.46      37549.38  **
+                                                        **************************************************************************************
+- :0: Verilog $finish

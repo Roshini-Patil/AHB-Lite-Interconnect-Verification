@@ -1,0 +1,84 @@
+rg_parallel_1                      main  +PRIO=fixed +WAIT_MAX=3                    PASS  expect=PASS OK    0.7s
+rg_parallel_2                      main  +PRIO=fixed +WAIT_MAX=3                    PASS  expect=PASS OK    0.7s
+rg_parallel_3                      main  +PRIO=fixed +WAIT_MAX=3                    PASS  expect=PASS OK    0.8s
+rg_parallel_4_busy20               main  +PRIO=equal +BUSY_PCT=20                   PASS  expect=PASS OK    0.7s
+rg_parallel_5_busy20               main  +PRIO=equal +BUSY_PCT=20                   PASS  expect=PASS OK    0.8s
+rg_parallel2_1                     main  +PRIO=fixed                                PASS  expect=PASS OK    0.8s
+rg_parallel2_2                     main  +PRIO=fixed                                PASS  expect=PASS OK    0.7s
+rg_contention_1                    main  +PRIO=dynamic +WAIT_MAX=4                  PASS  expect=PASS OK    0.9s
+rg_contention_2                    main  +PRIO=dynamic +WAIT_MAX=4                  PASS  expect=PASS OK    1.0s
+rg_contention_3                    main  +PRIO=dynamic +WAIT_MAX=4                  PASS  expect=PASS OK    1.0s
+rg_contention_4                    main  +PRIO=dynamic +WAIT_MAX=4                  PASS  expect=PASS OK    0.9s
+rg_contention_5                    main  +PRIO=dynamic +WAIT_MAX=4                  PASS  expect=PASS OK    1.1s
+rg_contention_6                    main  +PRIO=fixed +WAIT_MAX=2                    PASS  expect=PASS OK    0.9s
+rg_contention_7                    main  +PRIO=fixed +WAIT_MAX=2                    PASS  expect=PASS OK    1.0s
+rg_contention_8                    main  +PRIO=equal +WAIT_MAX=2                    PASS  expect=PASS OK    0.8s
+rg_contention_9                    main  +PRIO=equal +WAIT_MAX=2                    PASS  expect=PASS OK    0.9s
+rg_rr_1                            main  +PRIO=equal                                PASS  expect=PASS OK    0.6s
+rg_rr_2                            main  +PRIO=equal                                PASS  expect=PASS OK    0.6s
+rg_rr_3                            main  +PRIO=equal                                PASS  expect=PASS OK    0.6s
+rg_rr_4                            main  +PRIO=equal                                PASS  expect=PASS OK    0.7s
+rg_rr_5                            main  +PRIO=equal                                PASS  expect=PASS OK    0.6s
+rg_lock_1                          main  +PRIO=dynamic +WAIT_MAX=3                  PASS  expect=PASS OK    1.0s
+rg_lock_2                          main  +PRIO=dynamic +WAIT_MAX=3                  PASS  expect=PASS OK    1.0s
+rg_lock_3                          main  +PRIO=dynamic +WAIT_MAX=3                  PASS  expect=PASS OK    0.8s
+rg_lock_4                          main  +PRIO=equal                                PASS  expect=PASS OK    0.8s
+rg_longburst_1                     main  +PRIO=fixed                                PASS  expect=PASS OK    1.0s
+rg_longburst_2                     main  +PRIO=fixed                                PASS  expect=PASS OK    1.2s
+rg_longburst_3                     main  +PRIO=fixed                                PASS  expect=PASS OK    1.4s
+rg_burst_all_1                     main  +PRIO=dynamic +WAIT_MAX=3                  PASS  expect=PASS OK    0.9s
+rg_burst_all_2                     main  +PRIO=dynamic +WAIT_MAX=3                  PASS  expect=PASS OK    0.7s
+rg_burst_all_3                     main  +PRIO=dynamic +WAIT_MAX=3                  PASS  expect=PASS OK    0.7s
+rg_rw_same_1                       main  +PRIO=equal                                PASS  expect=PASS OK    0.5s
+rg_rw_same_2                       main  +PRIO=equal                                PASS  expect=PASS OK    0.6s
+rg_rw_same_3                       main  +PRIO=equal                                PASS  expect=PASS OK    0.6s
+rg_error_1                         main  +ERR_PCT=15 +WAIT_MAX=4                    PASS  expect=PASS OK    0.7s
+rg_error_2                         main  +ERR_PCT=15 +WAIT_MAX=4                    PASS  expect=PASS OK    0.7s
+rg_error_3                         main  +ERR_PCT=15 +WAIT_MAX=4                    PASS  expect=PASS OK    0.6s
+rg_error_4_errcont                 main  +ERR_PCT=15 +ERR_CONTINUE                  PASS  expect=PASS OK    0.8s
+rg_random_1                        main  +PRIO=dynamic +WAIT_MAX=4 +ERR_PCT=5       PASS  expect=PASS OK    0.7s
+rg_random_2                        main  +PRIO=dynamic +WAIT_MAX=4 +ERR_PCT=5       PASS  expect=PASS OK    0.7s
+rg_random_3                        main  +PRIO=dynamic +WAIT_MAX=4 +ERR_PCT=5       PASS  expect=PASS OK    0.7s
+rg_random_4                        main  +PRIO=dynamic +WAIT_MAX=4 +ERR_PCT=5       PASS  expect=PASS OK    0.8s
+rg_random_5                        main  +PRIO=dynamic +WAIT_MAX=4 +ERR_PCT=5       PASS  expect=PASS OK    0.7s
+rg_longburst_11_resetmid           main  +RESET_MID                                 PASS  expect=PASS OK    1.0s
+rg_random_12_resetmid              main  +PRIO=dynamic +RESET_MID                   PASS  expect=PASS OK    0.7s
+rg_busy_1_nobusy                   main  +PRIO=equal +BUSY_PCT=0                    PASS  expect=PASS OK    0.9s
+rg_busy_2_nobusy                   main  +PRIO=equal +BUSY_PCT=0                    PASS  expect=PASS OK    0.9s
+rg_busy_3_nobusy                   main  +PRIO=equal +BUSY_PCT=0                    PASS  expect=PASS OK    1.1s
+rg_mask_1                          mask  +PRIO=dynamic                              PASS  expect=PASS OK    0.7s
+rg_mask_2                          mask  +PRIO=dynamic                              PASS  expect=PASS OK    0.8s
+rg_mask_3                          mask  +PRIO=dynamic                              PASS  expect=PASS OK    0.7s
+rg_busy_1_bug                      main  +PRIO=equal                                FAIL  expect=FAIL OK    1.0s
+rg_busy_2_bug                      main  +PRIO=equal                                FAIL  expect=FAIL OK    1.1s
+rg_busy_3_bug                      main  +PRIO=equal                                FAIL  expect=FAIL OK    1.0s
+rg_busy_1_fix                      fix   +PRIO=equal                                PASS  expect=PASS OK    1.1s
+rg_busy_2_fix                      fix   +PRIO=equal                                PASS  expect=PASS OK    1.0s
+rg_busy_3_fix                      fix   +PRIO=equal                                PASS  expect=PASS OK    1.0s
+rg_random_7_neg_1kb                main  +NEG_1KB                                   FAIL  expect=FAIL OK    0.8s
+rg_random_7_inject_data            main  +INJECT=data                               FAIL  expect=FAIL OK    0.8s
+rg_error_7_inject_err1             main  +ERR_PCT=15 +INJECT=err1                   FAIL  expect=FAIL OK    0.6s
+Sign-off runs: 51, passed 51; all runs as expected: True; wall time 50s; total cycles 57241, master beats 24690
+Merged functional coverage over 51 runs
+
+htrans                    100.0%  (2/2 bins)
+hburst                    100.0%  (8/8 bins)
+hsize                     100.0%  (3/3 bins)
+hwrite                    100.0%  (2/2 bins)
+x_burst_size              100.0%  (24/24 bins)
+contention_wait           100.0%  (5/5 bins)
+slave_wait                100.0%  (4/4 bins)
+x_lock_contention         100.0%  (4/4 bins)
+x_error_master            100.0%  (7/7 bins)
+error_rest_of_burst       100.0%  (2/2 bins)
+htrans_transitions        100.0%  (9/9 bins)
+masters_requesting        100.0%  (3/3 bins)
+switch_point              100.0%  (4/4 bins)
+priority_relation         100.0%  (3/3 bins)
+x_nreq_priority           100.0%  (5/5 bins)
+x_locked_contention       100.0%  (2/2 bins)
+parallel_access           100.0%  (2/2 bins)
+priority_mode             100.0%  (3/3 bins)
+reset                     100.0%  (1/1 bins)
+
+OVERALL (bins hit / bins declared): 100.0%  (93/93)

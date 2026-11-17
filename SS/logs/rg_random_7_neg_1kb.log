@@ -1,0 +1,79 @@
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.13.18 interpreter at /usr/local/bin/python3
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Verilator version 5.038 2025-07-08
+     0.00ns INFO     cocotb                             Seeding Python random module with supplied seed 7
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /usr/local/lib/python3.13/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_ahb.AhbTest (1/1)
+     0.00ns INFO     cocotb.ahb                         UVM_INFO @ 0 ns [TEST] VSEQ=random N=20 PRIO=fixed seed=7 cfg=main plusargs={'VSEQ': 'random', 'NEG_1KB': True}
+
+
+
+------------------------------------------------------------
+ ,------.                    ,--.                ,--.       
+ |  .--. ' ,---.  ,--,--.    |  |    ,---. ,---. `--' ,---. 
+ |  '--'.'| .-. |' ,-.  |    |  |   | .-. | .-. |,--.| .--' 
+ |  |\  \ ' '-' '\ '-'  |    |  '--.' '-' ' '-' ||  |\ `--. 
+ `--' '--' `---'  `--`--'    `-----' `---' `-   /`--' `---' 
+- AHB3-Lite Interconnect Configuration---  `---'  ----------
+- Module: ahb_ic_wrap.u_ic
+- Masters: 3, Slaves: 3
+master[ 0] priority=2
+master[ 1] priority=1
+master[ 2] priority=0
+slv_addr_base[  0]=00000000000000000000000000000000 (0x00000000), slv_addr_mask[  0]=11110000000000000000000000000000 (0xf0000000)
+slv_addr_base[  1]=00010000000000000000000000000000 (0x10000000), slv_addr_mask[  1]=11110000000000000000000000000000 (0xf0000000)
+slv_addr_base[  2]=00100000000000000000000000000000 (0x20000000), slv_addr_mask[  2]=11110000000000000000000000000000 (0xf0000000)
+   120.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 120 ns [A_1KB] master0: incrementing burst crosses 1KB boundary 100003fc->10000400
+   120.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 120 ns [A_1KB] slave1: incrementing burst crosses 1KB boundary 100003fc->10000400
+   210.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 210 ns [A_1KB] master1: incrementing burst crosses 1KB boundary 100003fc->10000400
+   210.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 210 ns [A_1KB] slave1: incrementing burst crosses 1KB boundary 100003fc->10000400
+   570.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 570 ns [A_1KB] master0: incrementing burst crosses 1KB boundary 100003fc->10000400
+   570.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 570 ns [A_1KB] slave1: incrementing burst crosses 1KB boundary 100003fc->10000400
+   700.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 700 ns [A_1KB] master1: incrementing burst crosses 1KB boundary 100003fc->10000400
+   700.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 700 ns [A_1KB] slave1: incrementing burst crosses 1KB boundary 100003fc->10000400
+   740.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 740 ns [A_1KB] master0: incrementing burst crosses 1KB boundary 000003fc->00000400
+   740.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 740 ns [A_1KB] slave0: incrementing burst crosses 1KB boundary 000003fc->00000400
+   970.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 970 ns [A_1KB] master2: incrementing burst crosses 1KB boundary 100003fc->10000400
+   970.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 970 ns [A_1KB] slave1: incrementing burst crosses 1KB boundary 100003fc->10000400
+   990.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 990 ns [A_1KB] master1: incrementing burst crosses 1KB boundary 200003fc->20000400
+   990.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 990 ns [A_1KB] slave2: incrementing burst crosses 1KB boundary 200003fc->20000400
+  1160.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1160 ns [A_1KB] master0: incrementing burst crosses 1KB boundary 200003fc->20000400
+  1160.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1160 ns [A_1KB] slave2: incrementing burst crosses 1KB boundary 200003fc->20000400
+  1240.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1240 ns [A_1KB] master2: incrementing burst crosses 1KB boundary 000003fc->00000400
+  1240.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1240 ns [A_1KB] slave0: incrementing burst crosses 1KB boundary 000003fc->00000400
+  1300.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1300 ns [A_1KB] master1: incrementing burst crosses 1KB boundary 200003fc->20000400
+  1300.00ns ERROR    cocotb.ahb                         UVM_ERROR @ 1300 ns [A_1KB] slave2: incrementing burst crosses 1KB boundary 200003fc->20000400
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [SB] writes_ok=192 reads_ok=312 slave_err=0 no_slave_err=0 mask_err=0 pairs/slave=148,160,196 max_contention_wait=101
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [ARB] grant_changes=45 parallel_cycles=80 max_passed_over=4 (RTL bound 2) max_wait_cycles=101
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [SUMMARY] cycles=874 master_beats=504 slave_beats=504
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] htrans                 100.0%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] hburst                  37.5%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] hsize                   33.3%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] hwrite                 100.0%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] x_burst_size            12.5%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] contention_wait        100.0%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] slave_wait              75.0%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] x_lock_contention       50.0%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] x_error_master           0.0%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] error_rest_of_burst      0.0%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] htrans_transitions      55.6%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] masters_requesting     100.0%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] switch_point            75.0%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] priority_relation       66.7%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] x_nreq_priority         60.0%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] x_locked_contention      0.0%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] parallel_access         50.0%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] priority_mode           33.3%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [COV] reset                    0.0%
+  8735.00ns INFO     cocotb.ahb                         UVM_INFO @ 8735 ns [ERRORS] A_1KB            120
+AHB_RESULT: FAIL   errors=120
+  8735.00ns INFO     cocotb.regression                  test_ahb.AhbTest passed
+  8735.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_ahb.AhbTest               PASS        8735.00           0.26      33539.26  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0               8735.00           0.26      33352.19  **
+                                                        **************************************************************************************
+- :0: Verilog $finish
