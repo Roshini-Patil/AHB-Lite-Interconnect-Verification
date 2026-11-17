@@ -1,5 +1,12 @@
 # F0X — Verification of a Multi-Master AHB-Lite Interconnect
 
+
+## Sources and Tool
+RTL: https://github.com/RoaLogic/ahb3lite_interconnect (commit 4ad2737)
+• Package: https://github.com/RoaLogic/ahb3lite_pkg (commit ce28676)
+• Tools: Verilator https://github.com/verilator/verilator (v5.038);  cocotb https://www.cocotb.org (2.0.1);  pyuvm https://github.com/pyuvm/pyuvm;  GTKWave https://gtkwave.sourceforge.net
+• Protocol: ARM AMBA 3 AHB-Lite Protocol Specification (IHI 0033A)
+
 UVM-style verification of the open-source **RoaLogic `ahb3lite_interconnect`** (3 masters × 3 slaves), covering multi-master arbitration and burst transfers, using **open-source tools only**.
 
 ---
