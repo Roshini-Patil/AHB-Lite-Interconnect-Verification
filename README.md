@@ -1,8 +1,5 @@
 # F0X — Verification of a Multi-Master AHB-Lite Interconnect
 
-**FFVD Project 1 · PES University, Dept. of ECE · Team F0X**
-Roshini (lead) · Pallavi · Pranav · Nivedith
-
 UVM-style verification of the open-source **RoaLogic `ahb3lite_interconnect`** (3 masters × 3 slaves), covering multi-master arbitration and burst transfers, using **open-source tools only**.
 
 ---
